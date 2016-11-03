@@ -22,7 +22,8 @@ RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 RUN chmod a+x /usr/local/bin/symfony
 
 RUN curl -LsS http://phpdox.de/releases/phpdox.phar -o /usr/local/bin/phpdox
-RUN chmod a+x /usr/local/bin/phpdox
+RUN curl -LO https://deployer.org/deployer.phar -o /usr/local/bin/dep
+RUN chmod a+x /usr/local/bin/phpdox /usr/local/bin/dep
 
 RUN pecl install xdebug
 
