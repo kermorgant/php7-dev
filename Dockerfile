@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:5-apache
 MAINTAINER Mikael Kermorgant <mikael@kgtech.fi>
 ENV REFRESHED_AT 2016-11-23
 
