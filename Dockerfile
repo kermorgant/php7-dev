@@ -1,6 +1,6 @@
-FROM php:7-fpm
+FROM php:7-apache
 MAINTAINER Mikael Kermorgant <mikael@kgtech.fi>
-ENV REFRESHED_AT 2016-10-26
+ENV REFRESHED_AT 2016-11-23
 
 RUN apt-get update && apt-get install -y \
     libpng-dev \
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev  \
     curl \
     && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install gd curl \
+    && docker-php-ext-install mysql gd curl \
     && docker-php-ext-install iconv mcrypt \
     && docker-php-ext-install mysqli pdo pdo_mysql \
     && docker-php-ext-install soap gettext calendar zip \
