@@ -20,6 +20,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 RUN curl -LsS http://phpdox.de/releases/phpdox.phar -o /usr/local/bin/phpdox
 RUN curl -LsS https://deployer.org/deployer.phar -o /usr/local/bin/dep
+RUN curl -LsS wget https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
 RUN chmod a+x /usr/local/bin/phpdox /usr/local/bin/dep /usr/local/bin/symfony
 
 RUN composer global require "hirak/prestissimo:^0.3"
