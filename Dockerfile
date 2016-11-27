@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install iconv mcrypt \
     && docker-php-ext-install mysqli pdo pdo_mysql \
     && docker-php-ext-install soap gettext calendar zip \
-    && docker-php-ext-install intl
+    && docker-php-ext-install intl sockets
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
