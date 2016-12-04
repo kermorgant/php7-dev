@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev  \
     curl \
     git \
+    libexif-dev \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install gd curl \
     && docker-php-ext-install iconv mcrypt \
