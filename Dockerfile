@@ -39,5 +39,8 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 
+RUN npm install -g zombie
+RUN npm install -g bower
+
 
 WORKDIR /var/www
