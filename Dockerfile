@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install apc gd curl mbstring \
+    && docker-php-ext-install gd curl mbstring \
     && docker-php-ext-install iconv mcrypt \
     && docker-php-ext-install mysqli pdo pdo_mysql \
     && docker-php-ext-install soap gettext calendar zip \
