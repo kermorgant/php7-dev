@@ -1,6 +1,6 @@
-FROM php:5-apache
+FROM php:5.4-apache
 MAINTAINER Mikael Kermorgant <mikael@kgtech.fi>
-ENV REFRESHED_AT 2016-11-23
+ENV REFRESHED_AT 2016-12-09
 
 RUN apt-get update && apt-get install -y \
     libpng-dev \
