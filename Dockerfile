@@ -25,7 +25,6 @@ RUN curl -LsS wget https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpuni
 RUN chmod a+x /usr/local/bin/phpdox /usr/local/bin/dep /usr/local/bin/symfony
 
 RUN composer global require "hirak/prestissimo:^0.3"
-RUN pecl install xdebug
 
 RUN ["cp", "/etc/apache2/mods-available/rewrite.load", "/etc/apache2/mods-enabled/"]
 
