@@ -4,6 +4,7 @@ ENV REFRESHED_AT 2016-11-23
 
 RUN apt-get update && apt-get install -y \
     libpng-dev \
+    libjpeg-dev \
     libcurl4-gnutls-dev \
     libmcrypt-dev \
     libicu-dev \
