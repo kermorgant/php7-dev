@@ -1,6 +1,14 @@
 #!/bin/sh
 
+mkdir -p $(HOME)/.ssh && \
+test -e /var/tmp/id && cp /var/tmp/id $(HOME)/.ssh/id_rsa ; \
+test -e /var/tmp/known_hosts && cp /var/tmp/known_hosts $(HOME)/.ssh/known_hosts ; \
+test -e $(HOME)/.ssh/id_rsa && chmod 600 $(HOME)/.ssh/id_rsa ;
+
+
 VHOST=/etc/apache2/sites-enabled/000-default.conf
+
+
 
 # Use /var/www/html/glpi as DocumentRoot
 sed -i -- 's/DocumentRoot .*/DocumentRoot \/var\/www\/web/g' $VHOST
@@ -15,5 +23,4 @@ awk '/<\/VirtualHost>/{print "AllowOverride All" RS $0;next}1' $VHOST > tmp && m
 sed -i -- '/<\/Directory/d' $VHOST
 awk '/<\/VirtualHost>/{print "</Directory>" RS $0;next}1' $VHOST > tmp && mv tmp $VHOST
 
-echo "Starting apache"
 exec "$@"
