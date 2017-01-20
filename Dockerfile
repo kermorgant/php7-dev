@@ -3,10 +3,9 @@ MAINTAINER Mikael Kermorgant <mikael@kgtech.fi>
 ENV REFRESHED_AT 2016-11-23
 
 RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libjpeg62-turbo-dev \
     libfreetype6-dev \
+    libpng12-dev \
+    libjpeg62-turbo-dev \
     libcurl4-gnutls-dev \
     libmcrypt-dev \
     libicu-dev \
