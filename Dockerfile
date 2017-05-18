@@ -1,4 +1,4 @@
-FROM php:7-fpm
+FROM php:7.0-fpm
 MAINTAINER Mikael Kermorgant <mikael@kgtech.fi>
 ENV REFRESHED_AT 2016-10-26
 
