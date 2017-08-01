@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     libicu-dev \
     libxml2-dev  \
+    libpq-dev
     curl \
     git \
     libexif-dev \
@@ -20,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install iconv mcrypt \
     && docker-php-ext-install mysqli pdo pdo_mysql \
+    && docker-php-ext-install pdo_pgsql \
     && docker-php-ext-install soap gettext calendar zip \
     && docker-php-ext-install intl sockets exif
 
