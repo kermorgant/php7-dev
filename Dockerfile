@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     libicu-dev \
     libxml2-dev  \
-    libpq-dev
+    libpq-dev \
     curl \
     git \
     libexif-dev \
