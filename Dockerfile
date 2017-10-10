@@ -3,16 +3,16 @@ MAINTAINER Mikael Kermorgant <mikael@kgtech.fi>
 ENV REFRESHED_AT 2016-11-23
 
 RUN apt-get update && apt-get install -y \
-    libfreetype6-dev \
-    libpng12-dev \
-    libjpeg62-turbo-dev \
-    libcurl4-gnutls-dev \
-    libmcrypt-dev \
-    libicu-dev \
-    libxml2-dev  \
-    libpq-dev \
     curl \
     git \
+    libcurl4-gnutls-dev \
+    libfreetype6-dev \
+    libicu-dev \
+    libjpeg62-turbo-dev \
+    libmcrypt-dev \
+    libpng12-dev \
+    libpq-dev \
+    libxml2-dev  \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/lib/x86_64-linux-gnu/ \
     && docker-php-ext-install gd curl \
