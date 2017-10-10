@@ -38,3 +38,6 @@ RUN composer global require "hirak/prestissimo:^0.3"
 RUN pecl install xdebug
 
 WORKDIR /var/www
+
+COPY ["entrypoint.sh", "/"]
+ENTRYPOINT ["/entrypoint.sh"]
