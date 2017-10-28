@@ -14,8 +14,12 @@ RUN apt-get update && apt-get install -y \
     libpng12-dev \
     libpq-dev \
     libxml2-dev  \
+    libgpgme11 \
+    libgpgme11-dev \
     vim \
     && rm -rf /var/lib/apt/lists/* \
+    && pecl install gnupg \
+    && docker-php-ext-enable gnupg \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/lib/x86_64-linux-gnu/ \
     && docker-php-ext-install -j$(nproc) gd curl \
     && docker-php-ext-install bcmath \
